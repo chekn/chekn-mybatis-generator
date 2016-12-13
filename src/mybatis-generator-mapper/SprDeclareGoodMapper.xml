@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.study.dao.SprDeclareGoodMapper" >
+  <resultMap id="BaseResultMap" type="org.study.model.SprDeclareGood" >
+    <result column="id" property="id" jdbcType="VARCHAR" />
+    <result column="sSDcustomsDeclarationFormDtlId" property="sSDcustomsDeclarationFormDtlId" jdbcType="VARCHAR" />
+    <result column="iRowNo" property="iRowNo" jdbcType="INTEGER" />
+    <result column="sGoodsCode" property="sGoodsCode" jdbcType="VARCHAR" />
+    <result column="sGoodsNameCn" property="sGoodsNameCn" jdbcType="VARCHAR" />
+    <result column="sGoodsNameEn" property="sGoodsNameEn" jdbcType="VARCHAR" />
+    <result column="sFullGoodsName" property="sFullGoodsName" jdbcType="VARCHAR" />
+    <result column="sGoodsModel" property="sGoodsModel" jdbcType="VARCHAR" />
+    <result column="nDeclareQuantity" property="nDeclareQuantity" jdbcType="DOUBLE" />
+    <result column="iDeclareUnitId" property="iDeclareUnitId" jdbcType="INTEGER" />
+    <result column="sDeclareUnitCode" property="sDeclareUnitCode" jdbcType="VARCHAR" />
+    <result column="sDeclareUnitName" property="sDeclareUnitName" jdbcType="VARCHAR" />
+    <result column="nTradePrice" property="nTradePrice" jdbcType="DECIMAL" />
+    <result column="nTradeTotalAmountPre" property="nTradeTotalAmountPre" jdbcType="DECIMAL" />
+    <result column="nTradeTotalAmount" property="nTradeTotalAmount" jdbcType="DECIMAL" />
+    <result column="iTradeCurrencyId" property="iTradeCurrencyId" jdbcType="INTEGER" />
+    <result column="sTradeCurrencyCode" property="sTradeCurrencyCode" jdbcType="VARCHAR" />
+    <result column="sTradeCurrencyName" property="sTradeCurrencyName" jdbcType="VARCHAR" />
+    <result column="iQuantity1" property="iQuantity1" jdbcType="DOUBLE" />
+    <result column="iFirstUnitId" property="iFirstUnitId" jdbcType="INTEGER" />
+    <result column="sFirstUnitCode" property="sFirstUnitCode" jdbcType="VARCHAR" />
+    <result column="sFirstUnitName" property="sFirstUnitName" jdbcType="VARCHAR" />
+    <result column="iCHlevyExemptionId" property="iCHlevyExemptionId" jdbcType="INTEGER" />
+    <result column="sCHlevyExemptionCode" property="sCHlevyExemptionCode" jdbcType="VARCHAR" />
+    <result column="sCHlevyExemptionName" property="sCHlevyExemptionName" jdbcType="VARCHAR" />
+    <result column="iQuantity2" property="iQuantity2" jdbcType="DOUBLE" />
+    <result column="iSecondUnitId" property="iSecondUnitId" jdbcType="INTEGER" />
+    <result column="sSecondUnitCode" property="sSecondUnitCode" jdbcType="VARCHAR" />
+    <result column="sSecondUnitName" property="sSecondUnitName" jdbcType="VARCHAR" />
+    <result column="iOriginCountryId" property="iOriginCountryId" jdbcType="INTEGER" />
+    <result column="sOriginCountryCode" property="sOriginCountryCode" jdbcType="VARCHAR" />
+    <result column="sOriginCountryNameCn" property="sOriginCountryNameCn" jdbcType="VARCHAR" />
+    <result column="sOriginCountryNameEn" property="sOriginCountryNameEn" jdbcType="VARCHAR" />
+    <result column="iTargetCountryId" property="iTargetCountryId" jdbcType="INTEGER" />
+    <result column="sTargetCountryCode" property="sTargetCountryCode" jdbcType="VARCHAR" />
+    <result column="sTargetCountryNameCn" property="sTargetCountryNameCn" jdbcType="VARCHAR" />
+    <result column="sTargetCountryNameEn" property="sTargetCountryNameEn" jdbcType="VARCHAR" />
+    <result column="bDeleted" property="bDeleted" jdbcType="TINYINT" />
+    <result column="sCreator" property="sCreator" jdbcType="VARCHAR" />
+    <result column="tCreateTime" property="tCreateTime" jdbcType="TIMESTAMP" />
+    <result column="sUpdateMan" property="sUpdateMan" jdbcType="VARCHAR" />
+    <result column="tUpdateTime" property="tUpdateTime" jdbcType="TIMESTAMP" />
+    <result column="sRemark" property="sRemark" jdbcType="VARCHAR" />
+    <result column="iNewTradeSerialNumber" property="iNewTradeSerialNumber" jdbcType="INTEGER" />
+    <result column="sProductModel" property="sProductModel" jdbcType="VARCHAR" />
+    <result column="sManufacturer" property="sManufacturer" jdbcType="VARCHAR" />
+    <result column="sFineshGoodsNo" property="sFineshGoodsNo" jdbcType="VARCHAR" />
+    <result column="sFineshGoodsVersion" property="sFineshGoodsVersion" jdbcType="VARCHAR" />
+    <result column="nProcessingFees" property="nProcessingFees" jdbcType="DOUBLE" />
+    <result column="iOriginCertificateItem" property="iOriginCertificateItem" jdbcType="INTEGER" />
+    <result column="iBoxRowNo" property="iBoxRowNo" jdbcType="INTEGER" />
+    <result column="iPBcommodityWarehouseId" property="iPBcommodityWarehouseId" jdbcType="INTEGER" />
+    <result column="sGoodsModelEx" property="sGoodsModelEx" jdbcType="VARCHAR" />
+    <result column="iSDcustomsDeclarationOrderHdrId" property="iSDcustomsDeclarationOrderHdrId" jdbcType="INTEGER" />
+    <result column="iSequenceNo" property="iSequenceNo" jdbcType="INTEGER" />
+    <result column="tDeclareDate" property="tDeclareDate" jdbcType="TIMESTAMP" />
+    <result column="sCustomsNo" property="sCustomsNo" jdbcType="VARCHAR" />
+    <result column="iCHcustomsAreaId" property="iCHcustomsAreaId" jdbcType="INTEGER" />
+    <result column="sCHcustomsAreaCode" property="sCHcustomsAreaCode" jdbcType="VARCHAR" />
+    <result column="sCHcustomsAreaName" property="sCHcustomsAreaName" jdbcType="VARCHAR" />
+    <result column="sManualNo" property="sManualNo" jdbcType="VARCHAR" />
+    <result column="sContractNo" property="sContractNo" jdbcType="VARCHAR" />
+    <result column="dImportsDate" property="dImportsDate" jdbcType="VARCHAR" />
+    <result column="iTradeCompanyId" property="iTradeCompanyId" jdbcType="INTEGER" />
+    <result column="sTradeCompanyNo" property="sTradeCompanyNo" jdbcType="VARCHAR" />
+    <result column="sTradeCompanyNameCn" property="sTradeCompanyNameCn" jdbcType="VARCHAR" />
+    <result column="sTradeCompanyNameEn" property="sTradeCompanyNameEn" jdbcType="VARCHAR" />
+    <result column="iCHtransportationModeId" property="iCHtransportationModeId" jdbcType="INTEGER" />
+    <result column="sCHtransportationModeCode" property="sCHtransportationModeCode" jdbcType="VARCHAR" />
+    <result column="sCHtransportationModeName" property="sCHtransportationModeName" jdbcType="VARCHAR" />
+    <result column="iReceiverCompanyId" property="iReceiverCompanyId" jdbcType="INTEGER" />
+    <result column="sReceiverCompanyNo" property="sReceiverCompanyNo" jdbcType="VARCHAR" />
+    <result column="sReceiverCompanyNameCn" property="sReceiverCompanyNameCn" jdbcType="VARCHAR" />
+    <result column="sReceiverCompanyNameEn" property="sReceiverCompanyNameEn" jdbcType="VARCHAR" />
+    <result column="sTransportationName" property="sTransportationName" jdbcType="VARCHAR" />
+    <result column="sTransportationNo" property="sTransportationNo" jdbcType="VARCHAR" />
+    <result column="iAgentCompanyId" property="iAgentCompanyId" jdbcType="INTEGER" />
+    <result column="sAgentCompanyNo" property="sAgentCompanyNo" jdbcType="VARCHAR" />
+    <result column="sAgentCompanyNameCn" property="sAgentCompanyNameCn" jdbcType="VARCHAR" />
+    <result column="sAgentCompanyNameEn" property="sAgentCompanyNameEn" jdbcType="VARCHAR" />
+    <result column="sPickUpBillNo" property="sPickUpBillNo" jdbcType="VARCHAR" />
+    <result column="iCHtaxKindId" property="iCHtaxKindId" jdbcType="INTEGER" />
+    <result column="sCHtaxKindCode" property="sCHtaxKindCode" jdbcType="VARCHAR" />
+    <result column="sCHtaxKindName" property="sCHtaxKindName" jdbcType="VARCHAR" />
+    <result column="sCHtaxKindFullName" property="sCHtaxKindFullName" jdbcType="VARCHAR" />
+    <result column="sLisenceNo" property="sLisenceNo" jdbcType="VARCHAR" />
+    <result column="iTradeCountryId" property="iTradeCountryId" jdbcType="INTEGER" />
+    <result column="sTradeCountryCode" property="sTradeCountryCode" jdbcType="VARCHAR" />
+    <result column="sTradeCountryNameCn" property="sTradeCountryNameCn" jdbcType="VARCHAR" />
+    <result column="sTradeCountryNameEn" property="sTradeCountryNameEn" jdbcType="VARCHAR" />
+    <result column="iLoadingCountryId" property="iLoadingCountryId" jdbcType="INTEGER" />
+    <result column="sLoadingCountryCode" property="sLoadingCountryCode" jdbcType="VARCHAR" />
+    <result column="sLoadingCountryNameCn" property="sLoadingCountryNameCn" jdbcType="VARCHAR" />
+    <result column="sLoadingCountryNameEn" property="sLoadingCountryNameEn" jdbcType="VARCHAR" />
+    <result column="iDomesticSupplyOfGoodsToId" property="iDomesticSupplyOfGoodsToId" jdbcType="INTEGER" />
+    <result column="sDomesticSupplyOfGoodsToCode" property="sDomesticSupplyOfGoodsToCode" jdbcType="VARCHAR" />
+    <result column="sDomesticSupplyOfGoodsToName" property="sDomesticSupplyOfGoodsToName" jdbcType="VARCHAR" />
+    <result column="iCHtransactionTypeId" property="iCHtransactionTypeId" jdbcType="INTEGER" />
+    <result column="sCHtransactionTypeCode" property="sCHtransactionTypeCode" jdbcType="VARCHAR" />
+    <result column="sCHtransactionTypeName" property="sCHtransactionTypeName" jdbcType="VARCHAR" />
+    <result column="iPackCount" property="iPackCount" jdbcType="INTEGER" />
+    <result column="nGrossWeight" property="nGrossWeight" jdbcType="DOUBLE" />
+    <result column="nNetWeight" property="nNetWeight" jdbcType="DOUBLE" />
+    <result column="sAttachedBills" property="sAttachedBills" jdbcType="VARCHAR" />
+    <result column="iCHharbourId" property="iCHharbourId" jdbcType="INTEGER" />
+    <result column="sCHharbourCode" property="sCHharbourCode" jdbcType="VARCHAR" />
+    <result column="sCHharbourNameCn" property="sCHharbourNameCn" jdbcType="VARCHAR" />
+    <result column="sCHharbourNameEn" property="sCHharbourNameEn" jdbcType="VARCHAR" />
+    <result column="sSupplierInfo" property="sSupplierInfo" jdbcType="VARCHAR" />
+    <result column="sOrderNo" property="sOrderNo" jdbcType="VARCHAR" />
+    <result column="sCustomerBillNo" property="sCustomerBillNo" jdbcType="VARCHAR" />
+    <result column="iCHregulationFormId" property="iCHregulationFormId" jdbcType="INTEGER" />
+    <result column="sCHregulationFormCode" property="sCHregulationFormCode" jdbcType="VARCHAR" />
+    <result column="sCHregulationFormName" property="sCHregulationFormName" jdbcType="VARCHAR" />
+    <result column="sPackingType" property="sPackingType" jdbcType="VARCHAR" />
+    <result column="iCustomsDeclarationOrderStatus" property="iCustomsDeclarationOrderStatus" jdbcType="INTEGER" />
+    <result column="sCustomsDeclarationOrderStatus" property="sCustomsDeclarationOrderStatus" jdbcType="VARCHAR" />
+    <result column="iDeclarationPortId" property="iDeclarationPortId" jdbcType="INTEGER" />
+    <result column="sDeclarationPortCode" property="sDeclarationPortCode" jdbcType="VARCHAR" />
+    <result column="sDeclarationPortName" property="sDeclarationPortName" jdbcType="VARCHAR" />
+    <result column="iPaperlessDeclare" property="iPaperlessDeclare" jdbcType="INTEGER" />
+    <result column="nTaxRate" property="nTaxRate" jdbcType="DOUBLE" />
+    <result column="sCustomsNoRef" property="sCustomsNoRef" jdbcType="VARCHAR" />
+    <result column="sManualNoRef" property="sManualNoRef" jdbcType="VARCHAR" />
+    <result column="sBondedWarehouseNo" property="sBondedWarehouseNo" jdbcType="VARCHAR" />
+    <result column="sPaperlessDeclare" property="sPaperlessDeclare" jdbcType="VARCHAR" />
+    <result column="sCustomsDeclarationTypeCode" property="sCustomsDeclarationTypeCode" jdbcType="VARCHAR" />
+    <result column="sCustomsDeclarationTypeName" property="sCustomsDeclarationTypeName" jdbcType="VARCHAR" />
+    <result column="sTariffName" property="sTariffName" jdbcType="VARCHAR" />
+    <result column="iPriorityLevel" property="iPriorityLevel" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, sSDcustomsDeclarationFormDtlId, iRowNo, sGoodsCode, sGoodsNameCn, sGoodsNameEn, 
+    sFullGoodsName, sGoodsModel, nDeclareQuantity, iDeclareUnitId, sDeclareUnitCode, 
+    sDeclareUnitName, nTradePrice, nTradeTotalAmountPre, nTradeTotalAmount, iTradeCurrencyId, 
+    sTradeCurrencyCode, sTradeCurrencyName, iQuantity1, iFirstUnitId, sFirstUnitCode, 
+    sFirstUnitName, iCHlevyExemptionId, sCHlevyExemptionCode, sCHlevyExemptionName, iQuantity2, 
+    iSecondUnitId, sSecondUnitCode, sSecondUnitName, iOriginCountryId, sOriginCountryCode, 
+    sOriginCountryNameCn, sOriginCountryNameEn, iTargetCountryId, sTargetCountryCode, 
+    sTargetCountryNameCn, sTargetCountryNameEn, bDeleted, sCreator, tCreateTime, sUpdateMan, 
+    tUpdateTime, sRemark, iNewTradeSerialNumber, sProductModel, sManufacturer, sFineshGoodsNo, 
+    sFineshGoodsVersion, nProcessingFees, iOriginCertificateItem, iBoxRowNo, iPBcommodityWarehouseId, 
+    sGoodsModelEx, iSDcustomsDeclarationOrderHdrId, iSequenceNo, tDeclareDate, sCustomsNo, 
+    iCHcustomsAreaId, sCHcustomsAreaCode, sCHcustomsAreaName, sManualNo, sContractNo, 
+    dImportsDate, iTradeCompanyId, sTradeCompanyNo, sTradeCompanyNameCn, sTradeCompanyNameEn, 
+    iCHtransportationModeId, sCHtransportationModeCode, sCHtransportationModeName, iReceiverCompanyId, 
+    sReceiverCompanyNo, sReceiverCompanyNameCn, sReceiverCompanyNameEn, sTransportationName, 
+    sTransportationNo, iAgentCompanyId, sAgentCompanyNo, sAgentCompanyNameCn, sAgentCompanyNameEn, 
+    sPickUpBillNo, iCHtaxKindId, sCHtaxKindCode, sCHtaxKindName, sCHtaxKindFullName, 
+    sLisenceNo, iTradeCountryId, sTradeCountryCode, sTradeCountryNameCn, sTradeCountryNameEn, 
+    iLoadingCountryId, sLoadingCountryCode, sLoadingCountryNameCn, sLoadingCountryNameEn, 
+    iDomesticSupplyOfGoodsToId, sDomesticSupplyOfGoodsToCode, sDomesticSupplyOfGoodsToName, 
+    iCHtransactionTypeId, sCHtransactionTypeCode, sCHtransactionTypeName, iPackCount, 
+    nGrossWeight, nNetWeight, sAttachedBills, iCHharbourId, sCHharbourCode, sCHharbourNameCn, 
+    sCHharbourNameEn, sSupplierInfo, sOrderNo, sCustomerBillNo, iCHregulationFormId, 
+    sCHregulationFormCode, sCHregulationFormName, sPackingType, iCustomsDeclarationOrderStatus, 
+    sCustomsDeclarationOrderStatus, iDeclarationPortId, sDeclarationPortCode, sDeclarationPortName, 
+    iPaperlessDeclare, nTaxRate, sCustomsNoRef, sManualNoRef, sBondedWarehouseNo, sPaperlessDeclare, 
+    sCustomsDeclarationTypeCode, sCustomsDeclarationTypeName, sTariffName, iPriorityLevel
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="org.study.model.SprDeclareGoodCriteria" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'false' as QUERYID,
+    <include refid="Base_Column_List" />
+    from t_declare_good
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <insert id="insert" parameterType="org.study.model.SprDeclareGood" >
+    insert into t_declare_good (id, sSDcustomsDeclarationFormDtlId, 
+      iRowNo, sGoodsCode, sGoodsNameCn, 
+      sGoodsNameEn, sFullGoodsName, sGoodsModel, 
+      nDeclareQuantity, iDeclareUnitId, sDeclareUnitCode, 
+      sDeclareUnitName, nTradePrice, nTradeTotalAmountPre, 
+      nTradeTotalAmount, iTradeCurrencyId, sTradeCurrencyCode, 
+      sTradeCurrencyName, iQuantity1, iFirstUnitId, 
+      sFirstUnitCode, sFirstUnitName, iCHlevyExemptionId, 
+      sCHlevyExemptionCode, sCHlevyExemptionName, 
+      iQuantity2, iSecondUnitId, sSecondUnitCode, 
+      sSecondUnitName, iOriginCountryId, sOriginCountryCode, 
+      sOriginCountryNameCn, sOriginCountryNameEn, 
+      iTargetCountryId, sTargetCountryCode, sTargetCountryNameCn, 
+      sTargetCountryNameEn, bDeleted, sCreator, 
+      tCreateTime, sUpdateMan, tUpdateTime, 
+      sRemark, iNewTradeSerialNumber, sProductModel, 
+      sManufacturer, sFineshGoodsNo, sFineshGoodsVersion, 
+      nProcessingFees, iOriginCertificateItem, 
+      iBoxRowNo, iPBcommodityWarehouseId, sGoodsModelEx, 
+      iSDcustomsDeclarationOrderHdrId, iSequenceNo, 
+      tDeclareDate, sCustomsNo, iCHcustomsAreaId, 
+      sCHcustomsAreaCode, sCHcustomsAreaName, 
+      sManualNo, sContractNo, dImportsDate, 
+      iTradeCompanyId, sTradeCompanyNo, sTradeCompanyNameCn, 
+      sTradeCompanyNameEn, iCHtransportationModeId, 
+      sCHtransportationModeCode, sCHtransportationModeName, 
+      iReceiverCompanyId, sReceiverCompanyNo, 
+      sReceiverCompanyNameCn, sReceiverCompanyNameEn, 
+      sTransportationName, sTransportationNo, 
+      iAgentCompanyId, sAgentCompanyNo, sAgentCompanyNameCn, 
+      sAgentCompanyNameEn, sPickUpBillNo, iCHtaxKindId, 
+      sCHtaxKindCode, sCHtaxKindName, sCHtaxKindFullName, 
+      sLisenceNo, iTradeCountryId, sTradeCountryCode, 
+      sTradeCountryNameCn, sTradeCountryNameEn, 
+      iLoadingCountryId, sLoadingCountryCode, 
+      sLoadingCountryNameCn, sLoadingCountryNameEn, 
+      iDomesticSupplyOfGoodsToId, sDomesticSupplyOfGoodsToCode, 
+      sDomesticSupplyOfGoodsToName, iCHtransactionTypeId, 
+      sCHtransactionTypeCode, sCHtransactionTypeName, 
+      iPackCount, nGrossWeight, nNetWeight, 
+      sAttachedBills, iCHharbourId, sCHharbourCode, 
+      sCHharbourNameCn, sCHharbourNameEn, sSupplierInfo, 
+      sOrderNo, sCustomerBillNo, iCHregulationFormId, 
+      sCHregulationFormCode, sCHregulationFormName, 
+      sPackingType, iCustomsDeclarationOrderStatus, 
+      sCustomsDeclarationOrderStatus, iDeclarationPortId, 
+      sDeclarationPortCode, sDeclarationPortName, 
+      iPaperlessDeclare, nTaxRate, sCustomsNoRef, 
+      sManualNoRef, sBondedWarehouseNo, sPaperlessDeclare, 
+      sCustomsDeclarationTypeCode, sCustomsDeclarationTypeName, 
+      sTariffName, iPriorityLevel)
+    values (#{id,jdbcType=VARCHAR}, #{sSDcustomsDeclarationFormDtlId,jdbcType=VARCHAR}, 
+      #{iRowNo,jdbcType=INTEGER}, #{sGoodsCode,jdbcType=VARCHAR}, #{sGoodsNameCn,jdbcType=VARCHAR}, 
+      #{sGoodsNameEn,jdbcType=VARCHAR}, #{sFullGoodsName,jdbcType=VARCHAR}, #{sGoodsModel,jdbcType=VARCHAR}, 
+      #{nDeclareQuantity,jdbcType=DOUBLE}, #{iDeclareUnitId,jdbcType=INTEGER}, #{sDeclareUnitCode,jdbcType=VARCHAR}, 
+      #{sDeclareUnitName,jdbcType=VARCHAR}, #{nTradePrice,jdbcType=DECIMAL}, #{nTradeTotalAmountPre,jdbcType=DECIMAL}, 
+      #{nTradeTotalAmount,jdbcType=DECIMAL}, #{iTradeCurrencyId,jdbcType=INTEGER}, #{sTradeCurrencyCode,jdbcType=VARCHAR}, 
+      #{sTradeCurrencyName,jdbcType=VARCHAR}, #{iQuantity1,jdbcType=DOUBLE}, #{iFirstUnitId,jdbcType=INTEGER}, 
+      #{sFirstUnitCode,jdbcType=VARCHAR}, #{sFirstUnitName,jdbcType=VARCHAR}, #{iCHlevyExemptionId,jdbcType=INTEGER}, 
+      #{sCHlevyExemptionCode,jdbcType=VARCHAR}, #{sCHlevyExemptionName,jdbcType=VARCHAR}, 
+      #{iQuantity2,jdbcType=DOUBLE}, #{iSecondUnitId,jdbcType=INTEGER}, #{sSecondUnitCode,jdbcType=VARCHAR}, 
+      #{sSecondUnitName,jdbcType=VARCHAR}, #{iOriginCountryId,jdbcType=INTEGER}, #{sOriginCountryCode,jdbcType=VARCHAR}, 
+      #{sOriginCountryNameCn,jdbcType=VARCHAR}, #{sOriginCountryNameEn,jdbcType=VARCHAR}, 
+      #{iTargetCountryId,jdbcType=INTEGER}, #{sTargetCountryCode,jdbcType=VARCHAR}, #{sTargetCountryNameCn,jdbcType=VARCHAR}, 
+      #{sTargetCountryNameEn,jdbcType=VARCHAR}, #{bDeleted,jdbcType=TINYINT}, #{sCreator,jdbcType=VARCHAR}, 
+      #{tCreateTime,jdbcType=TIMESTAMP}, #{sUpdateMan,jdbcType=VARCHAR}, #{tUpdateTime,jdbcType=TIMESTAMP}, 
+      #{sRemark,jdbcType=VARCHAR}, #{iNewTradeSerialNumber,jdbcType=INTEGER}, #{sProductModel,jdbcType=VARCHAR}, 
+      #{sManufacturer,jdbcType=VARCHAR}, #{sFineshGoodsNo,jdbcType=VARCHAR}, #{sFineshGoodsVersion,jdbcType=VARCHAR}, 
+      #{nProcessingFees,jdbcType=DOUBLE}, #{iOriginCertificateItem,jdbcType=INTEGER}, 
+      #{iBoxRowNo,jdbcType=INTEGER}, #{iPBcommodityWarehouseId,jdbcType=INTEGER}, #{sGoodsModelEx,jdbcType=VARCHAR}, 
+      #{iSDcustomsDeclarationOrderHdrId,jdbcType=INTEGER}, #{iSequenceNo,jdbcType=INTEGER}, 
+      #{tDeclareDate,jdbcType=TIMESTAMP}, #{sCustomsNo,jdbcType=VARCHAR}, #{iCHcustomsAreaId,jdbcType=INTEGER}, 
+      #{sCHcustomsAreaCode,jdbcType=VARCHAR}, #{sCHcustomsAreaName,jdbcType=VARCHAR}, 
+      #{sManualNo,jdbcType=VARCHAR}, #{sContractNo,jdbcType=VARCHAR}, #{dImportsDate,jdbcType=VARCHAR}, 
+      #{iTradeCompanyId,jdbcType=INTEGER}, #{sTradeCompanyNo,jdbcType=VARCHAR}, #{sTradeCompanyNameCn,jdbcType=VARCHAR}, 
+      #{sTradeCompanyNameEn,jdbcType=VARCHAR}, #{iCHtransportationModeId,jdbcType=INTEGER}, 
+      #{sCHtransportationModeCode,jdbcType=VARCHAR}, #{sCHtransportationModeName,jdbcType=VARCHAR}, 
+      #{iReceiverCompanyId,jdbcType=INTEGER}, #{sReceiverCompanyNo,jdbcType=VARCHAR}, 
+      #{sReceiverCompanyNameCn,jdbcType=VARCHAR}, #{sReceiverCompanyNameEn,jdbcType=VARCHAR}, 
+      #{sTransportationName,jdbcType=VARCHAR}, #{sTransportationNo,jdbcType=VARCHAR}, 
+      #{iAgentCompanyId,jdbcType=INTEGER}, #{sAgentCompanyNo,jdbcType=VARCHAR}, #{sAgentCompanyNameCn,jdbcType=VARCHAR}, 
+      #{sAgentCompanyNameEn,jdbcType=VARCHAR}, #{sPickUpBillNo,jdbcType=VARCHAR}, #{iCHtaxKindId,jdbcType=INTEGER}, 
+      #{sCHtaxKindCode,jdbcType=VARCHAR}, #{sCHtaxKindName,jdbcType=VARCHAR}, #{sCHtaxKindFullName,jdbcType=VARCHAR}, 
+      #{sLisenceNo,jdbcType=VARCHAR}, #{iTradeCountryId,jdbcType=INTEGER}, #{sTradeCountryCode,jdbcType=VARCHAR}, 
+      #{sTradeCountryNameCn,jdbcType=VARCHAR}, #{sTradeCountryNameEn,jdbcType=VARCHAR}, 
+      #{iLoadingCountryId,jdbcType=INTEGER}, #{sLoadingCountryCode,jdbcType=VARCHAR}, 
+      #{sLoadingCountryNameCn,jdbcType=VARCHAR}, #{sLoadingCountryNameEn,jdbcType=VARCHAR}, 
+      #{iDomesticSupplyOfGoodsToId,jdbcType=INTEGER}, #{sDomesticSupplyOfGoodsToCode,jdbcType=VARCHAR}, 
+      #{sDomesticSupplyOfGoodsToName,jdbcType=VARCHAR}, #{iCHtransactionTypeId,jdbcType=INTEGER}, 
+      #{sCHtransactionTypeCode,jdbcType=VARCHAR}, #{sCHtransactionTypeName,jdbcType=VARCHAR}, 
+      #{iPackCount,jdbcType=INTEGER}, #{nGrossWeight,jdbcType=DOUBLE}, #{nNetWeight,jdbcType=DOUBLE}, 
+      #{sAttachedBills,jdbcType=VARCHAR}, #{iCHharbourId,jdbcType=INTEGER}, #{sCHharbourCode,jdbcType=VARCHAR}, 
+      #{sCHharbourNameCn,jdbcType=VARCHAR}, #{sCHharbourNameEn,jdbcType=VARCHAR}, #{sSupplierInfo,jdbcType=VARCHAR}, 
+      #{sOrderNo,jdbcType=VARCHAR}, #{sCustomerBillNo,jdbcType=VARCHAR}, #{iCHregulationFormId,jdbcType=INTEGER}, 
+      #{sCHregulationFormCode,jdbcType=VARCHAR}, #{sCHregulationFormName,jdbcType=VARCHAR}, 
+      #{sPackingType,jdbcType=VARCHAR}, #{iCustomsDeclarationOrderStatus,jdbcType=INTEGER}, 
+      #{sCustomsDeclarationOrderStatus,jdbcType=VARCHAR}, #{iDeclarationPortId,jdbcType=INTEGER}, 
+      #{sDeclarationPortCode,jdbcType=VARCHAR}, #{sDeclarationPortName,jdbcType=VARCHAR}, 
+      #{iPaperlessDeclare,jdbcType=INTEGER}, #{nTaxRate,jdbcType=DOUBLE}, #{sCustomsNoRef,jdbcType=VARCHAR}, 
+      #{sManualNoRef,jdbcType=VARCHAR}, #{sBondedWarehouseNo,jdbcType=VARCHAR}, #{sPaperlessDeclare,jdbcType=VARCHAR}, 
+      #{sCustomsDeclarationTypeCode,jdbcType=VARCHAR}, #{sCustomsDeclarationTypeName,jdbcType=VARCHAR}, 
+      #{sTariffName,jdbcType=VARCHAR}, #{iPriorityLevel,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="org.study.model.SprDeclareGood" >
+    insert into t_declare_good
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="sSDcustomsDeclarationFormDtlId != null" >
+        sSDcustomsDeclarationFormDtlId,
+      </if>
+      <if test="iRowNo != null" >
+        iRowNo,
+      </if>
+      <if test="sGoodsCode != null" >
+        sGoodsCode,
+      </if>
+      <if test="sGoodsNameCn != null" >
+        sGoodsNameCn,
+      </if>
+      <if test="sGoodsNameEn != null" >
+        sGoodsNameEn,
+      </if>
+      <if test="sFullGoodsName != null" >
+        sFullGoodsName,
+      </if>
+      <if test="sGoodsModel != null" >
+        sGoodsModel,
+      </if>
+      <if test="nDeclareQuantity != null" >
+        nDeclareQuantity,
+      </if>
+      <if test="iDeclareUnitId != null" >
+        iDeclareUnitId,
+      </if>
+      <if test="sDeclareUnitCode != null" >
+        sDeclareUnitCode,
+      </if>
+      <if test="sDeclareUnitName != null" >
+        sDeclareUnitName,
+      </if>
+      <if test="nTradePrice != null" >
+        nTradePrice,
+      </if>
+      <if test="nTradeTotalAmountPre != null" >
+        nTradeTotalAmountPre,
+      </if>
+      <if test="nTradeTotalAmount != null" >
+        nTradeTotalAmount,
+      </if>
+      <if test="iTradeCurrencyId != null" >
+        iTradeCurrencyId,
+      </if>
+      <if test="sTradeCurrencyCode != null" >
+        sTradeCurrencyCode,
+      </if>
+      <if test="sTradeCurrencyName != null" >
+        sTradeCurrencyName,
+      </if>
+      <if test="iQuantity1 != null" >
+        iQuantity1,
+      </if>
+      <if test="iFirstUnitId != null" >
+        iFirstUnitId,
+      </if>
+      <if test="sFirstUnitCode != null" >
+        sFirstUnitCode,
+      </if>
+      <if test="sFirstUnitName != null" >
+        sFirstUnitName,
+      </if>
+      <if test="iCHlevyExemptionId != null" >
+        iCHlevyExemptionId,
+      </if>
+      <if test="sCHlevyExemptionCode != null" >
+        sCHlevyExemptionCode,
+      </if>
+      <if test="sCHlevyExemptionName != null" >
+        sCHlevyExemptionName,
+      </if>
+      <if test="iQuantity2 != null" >
+        iQuantity2,
+      </if>
+      <if test="iSecondUnitId != null" >
+        iSecondUnitId,
+      </if>
+      <if test="sSecondUnitCode != null" >
+        sSecondUnitCode,
+      </if>
+      <if test="sSecondUnitName != null" >
+        sSecondUnitName,
+      </if>
+      <if test="iOriginCountryId != null" >
+        iOriginCountryId,
+      </if>
+      <if test="sOriginCountryCode != null" >
+        sOriginCountryCode,
+      </if>
+      <if test="sOriginCountryNameCn != null" >
+        sOriginCountryNameCn,
+      </if>
+      <if test="sOriginCountryNameEn != null" >
+        sOriginCountryNameEn,
+      </if>
+      <if test="iTargetCountryId != null" >
+        iTargetCountryId,
+      </if>
+      <if test="sTargetCountryCode != null" >
+        sTargetCountryCode,
+      </if>
+      <if test="sTargetCountryNameCn != null" >
+        sTargetCountryNameCn,
+      </if>
+      <if test="sTargetCountryNameEn != null" >
+        sTargetCountryNameEn,
+      </if>
+      <if test="bDeleted != null" >
+        bDeleted,
+      </if>
+      <if test="sCreator != null" >
+        sCreator,
+      </if>
+      <if test="tCreateTime != null" >
+        tCreateTime,
+      </if>
+      <if test="sUpdateMan != null" >
+        sUpdateMan,
+      </if>
+      <if test="tUpdateTime != null" >
+        tUpdateTime,
+      </if>
+      <if test="sRemark != null" >
+        sRemark,
+      </if>
+      <if test="iNewTradeSerialNumber != null" >
+        iNewTradeSerialNumber,
+      </if>
+      <if test="sProductModel != null" >
+        sProductModel,
+      </if>
+      <if test="sManufacturer != null" >
+        sManufacturer,
+      </if>
+      <if test="sFineshGoodsNo != null" >
+        sFineshGoodsNo,
+      </if>
+      <if test="sFineshGoodsVersion != null" >
+        sFineshGoodsVersion,
+      </if>
+      <if test="nProcessingFees != null" >
+        nProcessingFees,
+      </if>
+      <if test="iOriginCertificateItem != null" >
+        iOriginCertificateItem,
+      </if>
+      <if test="iBoxRowNo != null" >
+        iBoxRowNo,
+      </if>
+      <if test="iPBcommodityWarehouseId != null" >
+        iPBcommodityWarehouseId,
+      </if>
+      <if test="sGoodsModelEx != null" >
+        sGoodsModelEx,
+      </if>
+      <if test="iSDcustomsDeclarationOrderHdrId != null" >
+        iSDcustomsDeclarationOrderHdrId,
+      </if>
+      <if test="iSequenceNo != null" >
+        iSequenceNo,
+      </if>
+      <if test="tDeclareDate != null" >
+        tDeclareDate,
+      </if>
+      <if test="sCustomsNo != null" >
+        sCustomsNo,
+      </if>
+      <if test="iCHcustomsAreaId != null" >
+        iCHcustomsAreaId,
+      </if>
+      <if test="sCHcustomsAreaCode != null" >
+        sCHcustomsAreaCode,
+      </if>
+      <if test="sCHcustomsAreaName != null" >
+        sCHcustomsAreaName,
+      </if>
+      <if test="sManualNo != null" >
+        sManualNo,
+      </if>
+      <if test="sContractNo != null" >
+        sContractNo,
+      </if>
+      <if test="dImportsDate != null" >
+        dImportsDate,
+      </if>
+      <if test="iTradeCompanyId != null" >
+        iTradeCompanyId,
+      </if>
+      <if test="sTradeCompanyNo != null" >
+        sTradeCompanyNo,
+      </if>
+      <if test="sTradeCompanyNameCn != null" >
+        sTradeCompanyNameCn,
+      </if>
+      <if test="sTradeCompanyNameEn != null" >
+        sTradeCompanyNameEn,
+      </if>
+      <if test="iCHtransportationModeId != null" >
+        iCHtransportationModeId,
+      </if>
+      <if test="sCHtransportationModeCode != null" >
+        sCHtransportationModeCode,
+      </if>
+      <if test="sCHtransportationModeName != null" >
+        sCHtransportationModeName,
+      </if>
+      <if test="iReceiverCompanyId != null" >
+        iReceiverCompanyId,
+      </if>
+      <if test="sReceiverCompanyNo != null" >
+        sReceiverCompanyNo,
+      </if>
+      <if test="sReceiverCompanyNameCn != null" >
+        sReceiverCompanyNameCn,
+      </if>
+      <if test="sReceiverCompanyNameEn != null" >
+        sReceiverCompanyNameEn,
+      </if>
+      <if test="sTransportationName != null" >
+        sTransportationName,
+      </if>
+      <if test="sTransportationNo != null" >
+        sTransportationNo,
+      </if>
+      <if test="iAgentCompanyId != null" >
+        iAgentCompanyId,
+      </if>
+      <if test="sAgentCompanyNo != null" >
+        sAgentCompanyNo,
+      </if>
+      <if test="sAgentCompanyNameCn != null" >
+        sAgentCompanyNameCn,
+      </if>
+      <if test="sAgentCompanyNameEn != null" >
+        sAgentCompanyNameEn,
+      </if>
+      <if test="sPickUpBillNo != null" >
+        sPickUpBillNo,
+      </if>
+      <if test="iCHtaxKindId != null" >
+        iCHtaxKindId,
+      </if>
+      <if test="sCHtaxKindCode != null" >
+        sCHtaxKindCode,
+      </if>
+      <if test="sCHtaxKindName != null" >
+        sCHtaxKindName,
+      </if>
+      <if test="sCHtaxKindFullName != null" >
+        sCHtaxKindFullName,
+      </if>
+      <if test="sLisenceNo != null" >
+        sLisenceNo,
+      </if>
+      <if test="iTradeCountryId != null" >
+        iTradeCountryId,
+      </if>
+      <if test="sTradeCountryCode != null" >
+        sTradeCountryCode,
+      </if>
+      <if test="sTradeCountryNameCn != null" >
+        sTradeCountryNameCn,
+      </if>
+      <if test="sTradeCountryNameEn != null" >
+        sTradeCountryNameEn,
+      </if>
+      <if test="iLoadingCountryId != null" >
+        iLoadingCountryId,
+      </if>
+      <if test="sLoadingCountryCode != null" >
+        sLoadingCountryCode,
+      </if>
+      <if test="sLoadingCountryNameCn != null" >
+        sLoadingCountryNameCn,
+      </if>
+      <if test="sLoadingCountryNameEn != null" >
+        sLoadingCountryNameEn,
+      </if>
+      <if test="iDomesticSupplyOfGoodsToId != null" >
+        iDomesticSupplyOfGoodsToId,
+      </if>
+      <if test="sDomesticSupplyOfGoodsToCode != null" >
+        sDomesticSupplyOfGoodsToCode,
+      </if>
+      <if test="sDomesticSupplyOfGoodsToName != null" >
+        sDomesticSupplyOfGoodsToName,
+      </if>
+      <if test="iCHtransactionTypeId != null" >
+        iCHtransactionTypeId,
+      </if>
+      <if test="sCHtransactionTypeCode != null" >
+        sCHtransactionTypeCode,
+      </if>
+      <if test="sCHtransactionTypeName != null" >
+        sCHtransactionTypeName,
+      </if>
+      <if test="iPackCount != null" >
+        iPackCount,
+      </if>
+      <if test="nGrossWeight != null" >
+        nGrossWeight,
+      </if>
+      <if test="nNetWeight != null" >
+        nNetWeight,
+      </if>
+      <if test="sAttachedBills != null" >
+        sAttachedBills,
+      </if>
+      <if test="iCHharbourId != null" >
+        iCHharbourId,
+      </if>
+      <if test="sCHharbourCode != null" >
+        sCHharbourCode,
+      </if>
+      <if test="sCHharbourNameCn != null" >
+        sCHharbourNameCn,
+      </if>
+      <if test="sCHharbourNameEn != null" >
+        sCHharbourNameEn,
+      </if>
+      <if test="sSupplierInfo != null" >
+        sSupplierInfo,
+      </if>
+      <if test="sOrderNo != null" >
+        sOrderNo,
+      </if>
+      <if test="sCustomerBillNo != null" >
+        sCustomerBillNo,
+      </if>
+      <if test="iCHregulationFormId != null" >
+        iCHregulationFormId,
+      </if>
+      <if test="sCHregulationFormCode != null" >
+        sCHregulationFormCode,
+      </if>
+      <if test="sCHregulationFormName != null" >
+        sCHregulationFormName,
+      </if>
+      <if test="sPackingType != null" >
+        sPackingType,
+      </if>
+      <if test="iCustomsDeclarationOrderStatus != null" >
+        iCustomsDeclarationOrderStatus,
+      </if>
+      <if test="sCustomsDeclarationOrderStatus != null" >
+        sCustomsDeclarationOrderStatus,
+      </if>
+      <if test="iDeclarationPortId != null" >
+        iDeclarationPortId,
+      </if>
+      <if test="sDeclarationPortCode != null" >
+        sDeclarationPortCode,
+      </if>
+      <if test="sDeclarationPortName != null" >
+        sDeclarationPortName,
+      </if>
+      <if test="iPaperlessDeclare != null" >
+        iPaperlessDeclare,
+      </if>
+      <if test="nTaxRate != null" >
+        nTaxRate,
+      </if>
+      <if test="sCustomsNoRef != null" >
+        sCustomsNoRef,
+      </if>
+      <if test="sManualNoRef != null" >
+        sManualNoRef,
+      </if>
+      <if test="sBondedWarehouseNo != null" >
+        sBondedWarehouseNo,
+      </if>
+      <if test="sPaperlessDeclare != null" >
+        sPaperlessDeclare,
+      </if>
+      <if test="sCustomsDeclarationTypeCode != null" >
+        sCustomsDeclarationTypeCode,
+      </if>
+      <if test="sCustomsDeclarationTypeName != null" >
+        sCustomsDeclarationTypeName,
+      </if>
+      <if test="sTariffName != null" >
+        sTariffName,
+      </if>
+      <if test="iPriorityLevel != null" >
+        iPriorityLevel,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="sSDcustomsDeclarationFormDtlId != null" >
+        #{sSDcustomsDeclarationFormDtlId,jdbcType=VARCHAR},
+      </if>
+      <if test="iRowNo != null" >
+        #{iRowNo,jdbcType=INTEGER},
+      </if>
+      <if test="sGoodsCode != null" >
+        #{sGoodsCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sGoodsNameCn != null" >
+        #{sGoodsNameCn,jdbcType=VARCHAR},
+      </if>
+      <if test="sGoodsNameEn != null" >
+        #{sGoodsNameEn,jdbcType=VARCHAR},
+      </if>
+      <if test="sFullGoodsName != null" >
+        #{sFullGoodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="sGoodsModel != null" >
+        #{sGoodsModel,jdbcType=VARCHAR},
+      </if>
+      <if test="nDeclareQuantity != null" >
+        #{nDeclareQuantity,jdbcType=DOUBLE},
+      </if>
+      <if test="iDeclareUnitId != null" >
+        #{iDeclareUnitId,jdbcType=INTEGER},
+      </if>
+      <if test="sDeclareUnitCode != null" >
+        #{sDeclareUnitCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sDeclareUnitName != null" >
+        #{sDeclareUnitName,jdbcType=VARCHAR},
+      </if>
+      <if test="nTradePrice != null" >
+        #{nTradePrice,jdbcType=DECIMAL},
+      </if>
+      <if test="nTradeTotalAmountPre != null" >
+        #{nTradeTotalAmountPre,jdbcType=DECIMAL},
+      </if>
+      <if test="nTradeTotalAmount != null" >
+        #{nTradeTotalAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="iTradeCurrencyId != null" >
+        #{iTradeCurrencyId,jdbcType=INTEGER},
+      </if>
+      <if test="sTradeCurrencyCode != null" >
+        #{sTradeCurrencyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sTradeCurrencyName != null" >
+        #{sTradeCurrencyName,jdbcType=VARCHAR},
+      </if>
+      <if test="iQuantity1 != null" >
+        #{iQuantity1,jdbcType=DOUBLE},
+      </if>
+      <if test="iFirstUnitId != null" >
+        #{iFirstUnitId,jdbcType=INTEGER},
+      </if>
+      <if test="sFirstUnitCode != null" >
+        #{sFirstUnitCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sFirstUnitName != null" >
+        #{sFirstUnitName,jdbcType=VARCHAR},
+      </if>
+      <if test="iCHlevyExemptionId != null" >
+        #{iCHlevyExemptionId,jdbcType=INTEGER},
+      </if>
+      <if test="sCHlevyExemptionCode != null" >
+        #{sCHlevyExemptionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sCHlevyExemptionName != null" >
+        #{sCHlevyExemptionName,jdbcType=VARCHAR},
+      </if>
+      <if test="iQuantity2 != null" >
+        #{iQuantity2,jdbcType=DOUBLE},
+      </if>
+      <if test="iSecondUnitId != null" >
+        #{iSecondUnitId,jdbcType=INTEGER},
+      </if>
+      <if test="sSecondUnitCode != null" >
+        #{sSecondUnitCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sSecondUnitName != null" >
+        #{sSecondUnitName,jdbcType=VARCHAR},
+      </if>
+      <if test="iOriginCountryId != null" >
+        #{iOriginCountryId,jdbcType=INTEGER},
+      </if>
+      <if test="sOriginCountryCode != null" >
+        #{sOriginCountryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sOriginCountryNameCn != null" >
+        #{sOriginCountryNameCn,jdbcType=VARCHAR},
+      </if>
+      <if test="sOriginCountryNameEn != null" >
+        #{sOriginCountryNameEn,jdbcType=VARCHAR},
+      </if>
+      <if test="iTargetCountryId != null" >
+        #{iTargetCountryId,jdbcType=INTEGER},
+      </if>
+      <if test="sTargetCountryCode != null" >
+        #{sTargetCountryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sTargetCountryNameCn != null" >
+        #{sTargetCountryNameCn,jdbcType=VARCHAR},
+      </if>
+      <if test="sTargetCountryNameEn != null" >
+        #{sTargetCountryNameEn,jdbcType=VARCHAR},
+      </if>
+      <if test="bDeleted != null" >
+        #{bDeleted,jdbcType=TINYINT},
+      </if>
+      <if test="sCreator != null" >
+        #{sCreator,jdbcType=VARCHAR},
+      </if>
+      <if test="tCreateTime != null" >
+        #{tCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sUpdateMan != null" >
+        #{sUpdateMan,jdbcType=VARCHAR},
+      </if>
+      <if test="tUpdateTime != null" >
+        #{tUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sRemark != null" >
+        #{sRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="iNewTradeSerialNumber != null" >
+        #{iNewTradeSerialNumber,jdbcType=INTEGER},
+      </if>
+      <if test="sProductModel != null" >
+        #{sProductModel,jdbcType=VARCHAR},
+      </if>
+      <if test="sManufacturer != null" >
+        #{sManufacturer,jdbcType=VARCHAR},
+      </if>
+      <if test="sFineshGoodsNo != null" >
+        #{sFineshGoodsNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sFineshGoodsVersion != null" >
+        #{sFineshGoodsVersion,jdbcType=VARCHAR},
+      </if>
+      <if test="nProcessingFees != null" >
+        #{nProcessingFees,jdbcType=DOUBLE},
+      </if>
+      <if test="iOriginCertificateItem != null" >
+        #{iOriginCertificateItem,jdbcType=INTEGER},
+      </if>
+      <if test="iBoxRowNo != null" >
+        #{iBoxRowNo,jdbcType=INTEGER},
+      </if>
+      <if test="iPBcommodityWarehouseId != null" >
+        #{iPBcommodityWarehouseId,jdbcType=INTEGER},
+      </if>
+      <if test="sGoodsModelEx != null" >
+        #{sGoodsModelEx,jdbcType=VARCHAR},
+      </if>
+      <if test="iSDcustomsDeclarationOrderHdrId != null" >
+        #{iSDcustomsDeclarationOrderHdrId,jdbcType=INTEGER},
+      </if>
+      <if test="iSequenceNo != null" >
+        #{iSequenceNo,jdbcType=INTEGER},
+      </if>
+      <if test="tDeclareDate != null" >
+        #{tDeclareDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sCustomsNo != null" >
+        #{sCustomsNo,jdbcType=VARCHAR},
+      </if>
+      <if test="iCHcustomsAreaId != null" >
+        #{iCHcustomsAreaId,jdbcType=INTEGER},
+      </if>
+      <if test="sCHcustomsAreaCode != null" >
+        #{sCHcustomsAreaCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sCHcustomsAreaName != null" >
+        #{sCHcustomsAreaName,jdbcType=VARCHAR},
+      </if>
+      <if test="sManualNo != null" >
+        #{sManualNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sContractNo != null" >
+        #{sContractNo,jdbcType=VARCHAR},
+      </if>
+      <if test="dImportsDate != null" >
+        #{dImportsDate,jdbcType=VARCHAR},
+      </if>
+      <if test="iTradeCompanyId != null" >
+        #{iTradeCompanyId,jdbcType=INTEGER},
+      </if>
+      <if test="sTradeCompanyNo != null" >
+        #{sTradeCompanyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sTradeCompanyNameCn != null" >
+        #{sTradeCompanyNameCn,jdbcType=VARCHAR},
+      </if>
+      <if test="sTradeCompanyNameEn != null" >
+        #{sTradeCompanyNameEn,jdbcType=VARCHAR},
+      </if>
+      <if test="iCHtransportationModeId != null" >
+        #{iCHtransportationModeId,jdbcType=INTEGER},
+      </if>
+      <if test="sCHtransportationModeCode != null" >
+        #{sCHtransportationModeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sCHtransportationModeName != null" >
+        #{sCHtransportationModeName,jdbcType=VARCHAR},
+      </if>
+      <if test="iReceiverCompanyId != null" >
+        #{iReceiverCompanyId,jdbcType=INTEGER},
+      </if>
+      <if test="sReceiverCompanyNo != null" >
+        #{sReceiverCompanyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sReceiverCompanyNameCn != null" >
+        #{sReceiverCompanyNameCn,jdbcType=VARCHAR},
+      </if>
+      <if test="sReceiverCompanyNameEn != null" >
+        #{sReceiverCompanyNameEn,jdbcType=VARCHAR},
+      </if>
+      <if test="sTransportationName != null" >
+        #{sTransportationName,jdbcType=VARCHAR},
+      </if>
+      <if test="sTransportationNo != null" >
+        #{sTransportationNo,jdbcType=VARCHAR},
+      </if>
+      <if test="iAgentCompanyId != null" >
+        #{iAgentCompanyId,jdbcType=INTEGER},
+      </if>
+      <if test="sAgentCompanyNo != null" >
+        #{sAgentCompanyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sAgentCompanyNameCn != null" >
+        #{sAgentCompanyNameCn,jdbcType=VARCHAR},
+      </if>
+      <if test="sAgentCompanyNameEn != null" >
+        #{sAgentCompanyNameEn,jdbcType=VARCHAR},
+      </if>
+      <if test="sPickUpBillNo != null" >
+        #{sPickUpBillNo,jdbcType=VARCHAR},
+      </if>
+      <if test="iCHtaxKindId != null" >
+        #{iCHtaxKindId,jdbcType=INTEGER},
+      </if>
+      <if test="sCHtaxKindCode != null" >
+        #{sCHtaxKindCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sCHtaxKindName != null" >
+        #{sCHtaxKindName,jdbcType=VARCHAR},
+      </if>
+      <if test="sCHtaxKindFullName != null" >
+        #{sCHtaxKindFullName,jdbcType=VARCHAR},
+      </if>
+      <if test="sLisenceNo != null" >
+        #{sLisenceNo,jdbcType=VARCHAR},
+      </if>
+      <if test="iTradeCountryId != null" >
+        #{iTradeCountryId,jdbcType=INTEGER},
+      </if>
+      <if test="sTradeCountryCode != null" >
+        #{sTradeCountryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sTradeCountryNameCn != null" >
+        #{sTradeCountryNameCn,jdbcType=VARCHAR},
+      </if>
+      <if test="sTradeCountryNameEn != null" >
+        #{sTradeCountryNameEn,jdbcType=VARCHAR},
+      </if>
+      <if test="iLoadingCountryId != null" >
+        #{iLoadingCountryId,jdbcType=INTEGER},
+      </if>
+      <if test="sLoadingCountryCode != null" >
+        #{sLoadingCountryCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sLoadingCountryNameCn != null" >
+        #{sLoadingCountryNameCn,jdbcType=VARCHAR},
+      </if>
+      <if test="sLoadingCountryNameEn != null" >
+        #{sLoadingCountryNameEn,jdbcType=VARCHAR},
+      </if>
+      <if test="iDomesticSupplyOfGoodsToId != null" >
+        #{iDomesticSupplyOfGoodsToId,jdbcType=INTEGER},
+      </if>
+      <if test="sDomesticSupplyOfGoodsToCode != null" >
+        #{sDomesticSupplyOfGoodsToCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sDomesticSupplyOfGoodsToName != null" >
+        #{sDomesticSupplyOfGoodsToName,jdbcType=VARCHAR},
+      </if>
+      <if test="iCHtransactionTypeId != null" >
+        #{iCHtransactionTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="sCHtransactionTypeCode != null" >
+        #{sCHtransactionTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sCHtransactionTypeName != null" >
+        #{sCHtransactionTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="iPackCount != null" >
+        #{iPackCount,jdbcType=INTEGER},
+      </if>
+      <if test="nGrossWeight != null" >
+        #{nGrossWeight,jdbcType=DOUBLE},
+      </if>
+      <if test="nNetWeight != null" >
+        #{nNetWeight,jdbcType=DOUBLE},
+      </if>
+      <if test="sAttachedBills != null" >
+        #{sAttachedBills,jdbcType=VARCHAR},
+      </if>
+      <if test="iCHharbourId != null" >
+        #{iCHharbourId,jdbcType=INTEGER},
+      </if>
+      <if test="sCHharbourCode != null" >
+        #{sCHharbourCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sCHharbourNameCn != null" >
+        #{sCHharbourNameCn,jdbcType=VARCHAR},
+      </if>
+      <if test="sCHharbourNameEn != null" >
+        #{sCHharbourNameEn,jdbcType=VARCHAR},
+      </if>
+      <if test="sSupplierInfo != null" >
+        #{sSupplierInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="sOrderNo != null" >
+        #{sOrderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sCustomerBillNo != null" >
+        #{sCustomerBillNo,jdbcType=VARCHAR},
+      </if>
+      <if test="iCHregulationFormId != null" >
+        #{iCHregulationFormId,jdbcType=INTEGER},
+      </if>
+      <if test="sCHregulationFormCode != null" >
+        #{sCHregulationFormCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sCHregulationFormName != null" >
+        #{sCHregulationFormName,jdbcType=VARCHAR},
+      </if>
+      <if test="sPackingType != null" >
+        #{sPackingType,jdbcType=VARCHAR},
+      </if>
+      <if test="iCustomsDeclarationOrderStatus != null" >
+        #{iCustomsDeclarationOrderStatus,jdbcType=INTEGER},
+      </if>
+      <if test="sCustomsDeclarationOrderStatus != null" >
+        #{sCustomsDeclarationOrderStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="iDeclarationPortId != null" >
+        #{iDeclarationPortId,jdbcType=INTEGER},
+      </if>
+      <if test="sDeclarationPortCode != null" >
+        #{sDeclarationPortCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sDeclarationPortName != null" >
+        #{sDeclarationPortName,jdbcType=VARCHAR},
+      </if>
+      <if test="iPaperlessDeclare != null" >
+        #{iPaperlessDeclare,jdbcType=INTEGER},
+      </if>
+      <if test="nTaxRate != null" >
+        #{nTaxRate,jdbcType=DOUBLE},
+      </if>
+      <if test="sCustomsNoRef != null" >
+        #{sCustomsNoRef,jdbcType=VARCHAR},
+      </if>
+      <if test="sManualNoRef != null" >
+        #{sManualNoRef,jdbcType=VARCHAR},
+      </if>
+      <if test="sBondedWarehouseNo != null" >
+        #{sBondedWarehouseNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sPaperlessDeclare != null" >
+        #{sPaperlessDeclare,jdbcType=VARCHAR},
+      </if>
+      <if test="sCustomsDeclarationTypeCode != null" >
+        #{sCustomsDeclarationTypeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="sCustomsDeclarationTypeName != null" >
+        #{sCustomsDeclarationTypeName,jdbcType=VARCHAR},
+      </if>
+      <if test="sTariffName != null" >
+        #{sTariffName,jdbcType=VARCHAR},
+      </if>
+      <if test="iPriorityLevel != null" >
+        #{iPriorityLevel,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>
